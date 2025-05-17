@@ -18,6 +18,11 @@
   --fw-700: 700;
 
   --br-sm: 0.8rem;
+
+  --transition-duration-250: 250ms;
+  --transition-timing-function-ease-in-out: ease-in-out;
+
+  --opacity-70: 0.7;
 }
 
 *,
@@ -41,7 +46,21 @@ body {
 
 body {
   background-color: var(--color-white);
+  background-color: var(--color-neutral-01);
   font-family: var(--ff-primary);
   font-weight: var(--fw-weight-400);
   font-size: 1.6rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  outline: none;
+}
+
+img {
+  display: block;
+  object-fit: cover;
 }
