@@ -12,9 +12,7 @@ type TButtonProps = {
 
 const Button = ({ type = "primary", className, children }: TButtonProps) => {
   return (
-    <button className={`${styles.btn} ${styles[className]}  ${styles[`btn-${type}`]}`}>
-      {children}
-    </button>
+    <button className={`btn ${styles[className]}  ${styles[`btn-${type}`]}`}>{children}</button>
   );
 };
 
