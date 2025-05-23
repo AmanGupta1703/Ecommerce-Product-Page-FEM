@@ -93,7 +93,26 @@
     column-gap: 3rem;
   }
 
+  .header-logo {
+    transition: all var(----transition-duration-250) var(--transition-timing-function-ease-in-out);
+  }
+
   .header-nav-btn {
     display: none;
+  }
+
+  .header-logo:focus,
+  .header-cart:focus,
+  .header-profile-icon:focus {
+    transform: scale(0.8);
+  }
+
+  .header-logo:active {
+    transform: scale(0.9);
+  }
+
+  .header-cart:active,
+  .header-profile-icon:active {
+    transform: scale(0.75);
   }
 }
