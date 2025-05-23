@@ -14,12 +14,15 @@
   --color-neutral-03: hsl(220, 14%, 75%);
   --color-neutral-04: hsl(223, 64%, 98%);
 
+  --backdrop-black: hsl(0, 0%, 0%, 70%);
+
   --fw-400: 400;
   --fw-700: 700;
 
   --br-sm: 0.8rem;
 
   --transition-duration-250: 250ms;
+  --transition-duration-500: 500ms;
   --transition-timing-function-ease-in-out: ease-in-out;
 
   --opacity-70: 0.7;
@@ -39,17 +42,18 @@ html {
 }
 
 html,
-body {
+body,
+#root {
   width: 100%;
   height: 100%;
 }
 
 body {
   background-color: var(--color-white);
-  background-color: var(--color-neutral-01);
   font-family: var(--ff-primary);
   font-weight: var(--fw-weight-400);
   font-size: 1.6rem;
+  position: relative;
 }
 
 .btn {
@@ -63,4 +67,27 @@ body {
 img {
   display: block;
   object-fit: cover;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 100%;
+  }
 }
