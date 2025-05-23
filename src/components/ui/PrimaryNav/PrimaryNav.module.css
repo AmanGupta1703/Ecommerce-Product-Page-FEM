@@ -109,17 +109,23 @@
     color: var(--color-neutral-02);
   }
 
-  .nav-item:hover::after,
-  .nav-link:focus::after {
+  .nav-link::after {
     content: "";
     display: block;
     background-color: var(--color-primary-01);
-    width: 100%;
+    width: 0;
     height: 0.2rem;
     position: absolute;
     bottom: -215%;
+    transition: all var(--transition-duration-500) var(--transition-timing-function-ease-in-out);
+    opacity: 0;
     left: 0;
-    margin-right: 0.2rem;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    opacity: 1;
+    width: 100%;
   }
 
   .nav-link:hover {
