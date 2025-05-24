@@ -68,18 +68,27 @@
 }
 
 @media screen and (min-width: 600px) {
+  .header-nav-btn img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .header-logo {
+    height: 1.2rem;
+  }
+
   .header-cart-profile {
-    column-gap: 3rem;
+    column-gap: 1.5rem;
   }
 
   .header-cart img {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   .header-profile-icon img {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 }
 
@@ -114,5 +123,25 @@
   .header-cart:active,
   .header-profile-icon:active {
     transform: scale(0.75);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header-logo {
+    height: 2.2rem;
+  }
+
+  .header-cart-profile {
+    column-gap: 2rem;
+  }
+
+  .header-cart img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .header-profile-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
