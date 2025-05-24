@@ -1,5 +1,3 @@
-import { useProductGallery } from "../../../hooks/useProductGallery";
-
 import ProductGalleryProvider from "../../../contexts/ProductGalleryContext";
 
 import { productImages } from "../../../utils";
