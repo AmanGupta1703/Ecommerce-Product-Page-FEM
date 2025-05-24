@@ -2,6 +2,19 @@
   height: 100%;
 }
 
+@media screen and (min-width: 600px) {
+  .layout {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .layout {
+    max-width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .layout {
     max-width: 110rem;
