@@ -1,6 +1,6 @@
 import ProductGalleryProvider from "../../../contexts/ProductGalleryContext";
 
-import { productImages, productThumbnailImages } from "../../../utils";
+import { productImages } from "../../../utils";
 
 import { ProductImageCarousel, ProductThumbnailImages } from "../";
 

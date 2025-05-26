@@ -61,6 +61,7 @@
 
 @media screen and (min-width: 1024px) {
   .product-hero-img-box {
+    cursor: pointer;
     width: 90%;
     height: auto;
   }

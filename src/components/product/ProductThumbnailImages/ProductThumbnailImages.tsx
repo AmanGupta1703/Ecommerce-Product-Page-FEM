@@ -12,10 +12,13 @@ type ThumbnailImageProps = {
 
 const ThumbnailImage = ({ id, name, imageUrl }: ThumbnailImageProps) => {
   const { imageIndex, setImageIndex } = useProductGallery();
-  console.log(imageIndex);
 
   return (
-    <div className={styles["thumbnail-image-box"]} onClick={() => setImageIndex(id - 1)}>
+    <div
+      className={`${styles["thumbnail-image-box"]} ${
+        imageIndex + 1 === id ? `${styles["active"]}` : ""
+      }`}
+      onClick={() => setImageIndex(id - 1)}>
       <img className={styles["thumbnail-image"]} src={imageUrl} alt={name} />
     </div>
   );
