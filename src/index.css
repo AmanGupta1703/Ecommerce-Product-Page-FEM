@@ -82,6 +82,11 @@ a {
   text-decoration: none;
 }
 
+::selection {
+  color: var(--color-white);
+  background-color: var(--color-primary-01);
+}
+
 @media screen and (max-width: 600px) {
   html {
     font-size: 50%;

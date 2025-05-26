@@ -1,0 +1,35 @@
+.thumbnail-images-container {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .thumbnail-images-container {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 2rem;
+    width: 90%;
+  }
+
+  .thumbnail-image-box {
+    cursor: pointer;
+    border: 0.09rem solid var(--color-primary-01);
+    border-radius: 1.2rem;
+    transition: opacity var(--transition-duration-500) var(--transition-timing-function-ease-in-out);
+  }
+
+  .thumbnail-image-box:hover {
+    border-width: 0.2rem;
+    opacity: 0.6;
+  }
+
+  .thumbnail-image {
+    border-radius: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .thumbnail-images-container {
+    width: 85%;
+  }
+}

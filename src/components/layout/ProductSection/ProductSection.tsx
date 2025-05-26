@@ -1,4 +1,4 @@
-import { ProductGallery } from "../../product";
+import { ProductGallery, ProductDetails } from "../../product";
 
 import styles from "./ProductSection.module.css";
 
@@ -7,6 +7,7 @@ const ProductSection = () => {
     <section className={styles["section-product-sneaker"]}>
       <div className={styles["section-wrapper"]}>
         <ProductGallery />
+        <ProductDetails />
       </div>
     </section>
   );

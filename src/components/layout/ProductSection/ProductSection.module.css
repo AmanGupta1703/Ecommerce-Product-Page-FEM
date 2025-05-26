@@ -8,3 +8,14 @@
   .section-product-sneaker {
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .section-product-sneaker {
+    padding: 6rem 3rem 0;
+  }
+
+  .section-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}

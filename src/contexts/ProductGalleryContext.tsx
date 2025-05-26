@@ -11,6 +11,7 @@ type TProductGalleryProviderProps = {
 
 type TProductGallertContext = {
   imageIndex: number;
+  setImageIndex: React.Dispatch<React.SetStateAction<number>>;
   handleNextImage: () => void;
   handlePreviousImage: () => void;
 };
@@ -35,7 +36,7 @@ const ProductGalleryProvider = ({ children, images }: TProductGalleryProviderPro
   }, [imageIndex]);
 
   const value = useMemo(
-    () => ({ imageIndex, handleNextImage, handlePreviousImage }),
+    () => ({ imageIndex, handleNextImage, handlePreviousImage, setImageIndex }),
     [imageIndex, handleNextImage, handlePreviousImage],
   );
 

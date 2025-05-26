@@ -28,3 +28,19 @@
 .btn-primary:hover {
   opacity: var(--opacity-70);
 }
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .btn-cart {
+    flex: 0.5;
+  }
+
+  .btn-primary {
+    padding: 0rem 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .btn-cart {
+    flex: 0.5;
+  }
+}

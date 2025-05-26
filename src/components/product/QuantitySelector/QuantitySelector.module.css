@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0.9rem;
+  padding: 1.2rem 1.5rem;
 }
 
 .quantity-increase,
@@ -19,7 +19,7 @@
 
 .quantity {
   color: var(--color-neutral-01);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: var(--fw-700);
 }
 
@@ -34,4 +34,20 @@
 .quantity-decrease:hover,
 .quantity-decrease:focus {
   opacity: var(--opacity-70);
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .quantity-selector {
+    flex: 0.5;
+  }
+
+  .quantity {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .quantity-selector {
+    flex: 0.5;
+  }
 }
