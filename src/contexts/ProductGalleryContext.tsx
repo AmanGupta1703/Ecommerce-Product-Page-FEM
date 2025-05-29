@@ -10,8 +10,10 @@ type TProductGalleryProviderProps = {
 };
 
 type TProductGallertContext = {
+  showLightbox: boolean;
   imageIndex: number;
   setImageIndex: React.Dispatch<React.SetStateAction<number>>;
+  handleLightboxToggle: () => void;
   handleNextImage: () => void;
   handlePreviousImage: () => void;
 };
@@ -22,6 +24,7 @@ export const ProductGalleryContext = createContext<TProductGallertContext | unde
 
 const ProductGalleryProvider = ({ children, images }: TProductGalleryProviderProps) => {
   const [imageIndex, setImageIndex] = useState(0);
+  const [showLightbox, setShowLightbox] = useState(false);
 
   const handleNextImage = useCallback(() => {
     setImageIndex((prevImageIndex) =>
@@ -35,9 +38,27 @@ const ProductGalleryProvider = ({ children, images }: TProductGalleryProviderPro
     );
   }, [imageIndex]);
 
+  const handleLightboxToggle = useCallback(() => {
+    setShowLightbox((prevShowLightbox) => !prevShowLightbox);
+  }, [showLightbox]);
+
   const value = useMemo(
-    () => ({ imageIndex, handleNextImage, handlePreviousImage, setImageIndex }),
-    [imageIndex, handleNextImage, handlePreviousImage],
+    () => ({
+      imageIndex,
+      handleNextImage,
+      handlePreviousImage,
+      setImageIndex,
+      showLightbox,
+      handleLightboxToggle,
+    }),
+    [
+      imageIndex,
+      handleNextImage,
+      handlePreviousImage,
+      setImageIndex,
+      showLightbox,
+      handleLightboxToggle,
+    ],
   );
 
   return <ProductGalleryContext.Provider value={value}>{children}</ProductGalleryContext.Provider>;

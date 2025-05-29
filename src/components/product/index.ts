@@ -4,3 +4,4 @@ export { default as ProductImageCarousel } from "./ProductImageCarousel/ProductI
 export { default as ProductDetails } from "./ProductDetails/ProductDetails";
 export { default as ProductThumbnailImages } from "./ProductThumbnailImages/ProductThumbnailImages";
 export { default as CartItem } from "./CartItem/CartItem";
+export { default as ImageGalleryModal } from "./ImageGalleryModal/ImageGalleryModal";

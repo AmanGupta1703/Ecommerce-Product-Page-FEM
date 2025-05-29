@@ -1,7 +1,3 @@
-import ProductGalleryProvider from "../../../contexts/ProductGalleryContext";
-
-import { productImages } from "../../../utils";
-
 import { ProductImageCarousel, ProductThumbnailImages } from "../";
 
 import styles from "./ProductGallery.module.css";
@@ -11,13 +7,11 @@ const ProductGallery = () => {
     <article className={styles["product-image-gallery"]}>
       {/* main image */}
 
-      <ProductGalleryProvider images={productImages}>
-        <ProductImageCarousel />
+      <ProductImageCarousel />
 
-        {/* thumbnail images ( only visible on desktop ) */}
+      {/* thumbnail images ( only visible on desktop ) */}
 
-        <ProductThumbnailImages />
-      </ProductGalleryProvider>
+      <ProductThumbnailImages />
     </article>
   );
 };

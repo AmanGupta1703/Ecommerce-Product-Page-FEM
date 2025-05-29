@@ -5,7 +5,8 @@ import { productImages } from "../../../utils";
 import styles from "./ProductImageCarousel.module.css";
 
 const ProductImageCarousel = () => {
-  const { imageIndex, handleNextImage, handlePreviousImage } = useProductGallery();
+  const { imageIndex, handleNextImage, handlePreviousImage, handleLightboxToggle } =
+    useProductGallery();
 
   const imageObj = productImages[imageIndex];
   const imageId = imageObj.id;
@@ -14,7 +15,7 @@ const ProductImageCarousel = () => {
   return (
     <div className={styles["product-main-image-container"]}>
       <div className={styles["product-hero-img-box"]}>
-        <img src={imageUrl} alt={imageObj.name} />
+        <img onClick={handleLightboxToggle} src={imageUrl} alt={imageObj.name} />
       </div>
 
       <div className={styles["product-button-actions"]}>
