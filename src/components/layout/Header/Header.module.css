@@ -34,9 +34,74 @@
   column-gap: 1rem;
 }
 
+.cart-container {
+  position: relative;
+}
+
+.cart {
+  background-color: var(--color-white);
+  border-radius: 1.2rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  width: 36.5rem;
+  position: absolute;
+  top: 230%;
+  left: -31rem;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0.8;
+}
+
+.cart-header {
+  border-bottom: 0.1rem solid var(--color-neutral-04);
+  padding: 1.5rem;
+}
+
+.cart-header h2 {
+  font-size: 2.4rem;
+}
+
+.cart-body {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.cart-body-empty {
+  padding: 8rem 0;
+}
+
+.empty-cart {
+  color: var(--color-neutral-02);
+  font-weight: var(--fw-700);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .header-cart,
 .header-profile-icon {
   transition: all 500ms ease-in-out;
+}
+
+.header-cart {
+  position: relative;
+}
+
+.badge {
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  position: absolute;
+  top: -50%;
+  right: -50%;
+}
+
+.badge-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary-01);
+  font-size: 1rem;
 }
 
 .header-cart img {
@@ -65,6 +130,11 @@
 
 .header-profile-icon:active {
   border-width: 0.1rem;
+}
+
+/* utility classes */
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 600px) {

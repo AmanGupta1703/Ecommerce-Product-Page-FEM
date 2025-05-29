@@ -8,11 +8,15 @@ type TButtonProps = {
   className: TButtonClassnames;
 
   children: React.ReactNode;
+
+  onClick?: () => void;
 };
 
-const Button = ({ type = "primary", className, children }: TButtonProps) => {
+const Button = ({ type = "primary", className, onClick, children }: TButtonProps) => {
   return (
-    <button className={`btn ${styles[className]}  ${styles[`btn-${type}`]}`}>{children}</button>
+    <button onClick={onClick} className={`btn ${styles[className]}  ${styles[`btn-${type}`]}`}>
+      {children}
+    </button>
   );
 };
 

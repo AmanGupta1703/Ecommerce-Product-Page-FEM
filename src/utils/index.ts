@@ -67,7 +67,15 @@ export const productThumbnailImages = [
   },
 ];
 
+export const featuredProduct = {
+  id: "sneaker-001",
+  name: "Fall Limited Edition Sneakers",
+  price: 125.0,
+  imageUrl: "images/image-product-1-thumbnail.jpg",
+};
+
 export const productData = {
+  productId: "sneaker-001",
   companyName: "Sneaker Company",
   title: "Fall Limited Edition Sneakers",
   description:

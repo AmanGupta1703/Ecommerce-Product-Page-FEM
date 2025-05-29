@@ -1,3 +1,5 @@
+import { useCart } from "../../../hooks/useCart";
+
 import { productData } from "../../../utils";
 
 import { QuantitySelector } from "../";
@@ -6,6 +8,8 @@ import { Button } from "../../ui";
 import styles from "./ProductDetails.module.css";
 
 const ProductDetails = () => {
+  const { handleAddToCart } = useCart();
+
   return (
     <article className={styles["product-details"]}>
       <div className={styles["product-details-meta"]}>
@@ -23,12 +27,14 @@ const ProductDetails = () => {
       </div>
 
       <div className={styles["product-actions"]}>
-        <QuantitySelector />
-        <Button className="btn-cart">
+        <QuantitySelector productId={productData.productId} />
+        <Button className="btn-cart" onClick={() => handleAddToCart(productData.productId)}>
           <span aria-label="cart icon">
             <img src="images/icon-cart.svg" alt="" />
           </span>
-          <span>Add to cart</span>
+          <span role="button" aria-label="Add this product to cart">
+            Add to cart
+          </span>
         </Button>
       </div>
     </article>

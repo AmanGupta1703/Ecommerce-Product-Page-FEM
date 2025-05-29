@@ -1,14 +1,18 @@
 import { Layout, Header, ProductSection } from "./components/layout";
 
+import CartContextProvider from "./contexts/CartContext";
+
 const App = () => {
   return (
-    <Layout>
-      <Header />
+    <CartContextProvider>
+      <Layout>
+        <Header />
 
-      <main className="main">
-        <ProductSection />
-      </main>
-    </Layout>
+        <main className="main">
+          <ProductSection />
+        </main>
+      </Layout>
+    </CartContextProvider>
   );
 };
 
